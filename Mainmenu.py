@@ -71,7 +71,7 @@ if selected=="User":
             new_dict[j]=i
             i+=1
 
-        model=pickle.load(open('models/newModel.pkl','rb'))
+        model=pickle.load(open('models\Diseases\Disease_prediction_model.pkl','rb'))
         pred=model.predict([new])
 
         st.write(f'### Disease might be {new_list[pred[0]]}')
@@ -111,16 +111,17 @@ if selected=="Technician":
 
         input_list=[age,sex,cp,trestbps,chol,fbs,restecg,thaclach,exang,oldpeak,slope,ca,thal]
 
-        model = pickle.load(open('models/Heart_disease.pkl','rb'))
+        model = pickle.load(open('models/Heart/Heart_disease.pkl','rb'))
 
 
         if st.button("Result"):
             prediction=model.predict([input_list])
             
             if prediction[0]==1:
-                st.header("High Probability of Heart Disease")
+                st.error(""" ### High Probability of Heart Disease""")
             else:
-                st.success("Huurayy! You are Fine")
+                st.success(""" ### Huurayy! You are Fine""")
+                st.balloons()
 
     if (options=="Diabetes"):
 
@@ -137,10 +138,10 @@ if selected=="Technician":
 
         input_list=[age,glucose,bp,skinthick,bmi,dpf,insulin,pregnant]
 
-        model = pickle.load(open('models/diabetes.pkl','rb'))
+        model = pickle.load(open('models/Diabetes/diabetes.pkl','rb'))
 
         if st.button("Result"):
-            prediction=model.predict([list])           
+            prediction=model.predict([input_list])           
             if prediction[0]==1:
                 st.error(""" ### High Probability of Diabetes""")
             else:
@@ -152,7 +153,7 @@ if selected=="Technician":
 
         class_names=["parasited","uninfected"]
 
-        model=load_model("models/malaria.h5")
+        model=load_model("models/Malaria/malaria.h5")
 
 
         file = st.file_uploader("Please upload an brain scan file", type=["jpg", "png"])
@@ -191,7 +192,7 @@ if selected=="Technician":
 
         class_names=["Benign","Malignant"]
 
-        model=load_model("models/BrainTumor.h5")
+        model=load_model("models\BrainTumor\BrainTumor.h5")
     
         file = st.file_uploader("Please upload scan file", type=["jpg", "png"])
     
@@ -227,11 +228,11 @@ if selected=="Technician":
 
 
     if (options=="Breast Cancer"):
-        st.title('Breat Cancer Prediction')
+        st.title('Breast Cancer Prediction')
 
         class_names=["Benign","Malignant"]
 
-        model=load_model("models/breast_cancer.h5")
+        model=load_model("models/BreastCancer/breast_cancer.h5")
     
         file = st.file_uploader("Please upload scan file", type=["jpg", "png"])
     
