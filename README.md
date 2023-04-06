@@ -3,11 +3,14 @@
 
 ## List of Contents
 - [Team Members](#team-members)
+- [Theme](#theme)
 - [Introduction](#introduction)
-- [Features](#features)
-- [How To Run](#how-to-run)
-- [Sample Input-Output](#sample-input-output)
-- [Sample Database](#sample-database)
+- [Technologies](#technologies)
+- [Frameworks](#frameworks)
+- [What We learnt](#what-we-learnt)
+- [Experience while working on the Project](#experience-while-working-on-the-project)
+- [Keypoints of the Project](#keypoints-of-the-project)
+- [Basic Flow of the Project](#basic-flow-of-the-project)
 
 ## Team Members
 
@@ -18,51 +21,70 @@
  Medapati Aswin Reddy , 211121
  
  ## Theme
- **Track-1 : Health Related Services**
+            << Track-1 : Health Related Services >>
 
 ## Introduction
 
-This Website is for Users and Lab Technician
+This Website is for Users and Lab Technician:
 
-- **Users**
+- **For Users**
   
-  Contains Model which Predicts Disease Based on Symptoms they have.
+  The application offers a Model which can predict disease based on the symptoms they have.
   
 - **Lab Technician**
   
-  Contains 5 Models:
+  The application offers the following 5 Features to the Lab Technicians:
       
-      - Heart-Disease
-      - Diabetes
-      - Brain Tumor
-      - Malaria
-      - Breast Cancer
+      - Heart-Disease prediction
+      - Diabetes prediction
+      - Brain Tumour prediction
+      - Malaria prediction
+      - Breast Cancer prediction
+The website also has its own chatbot, Tmedo for interaction.
   
 
 ## Technologies
 - Machine Learning Classification Algorithms:
 
-      - Multinomial Naive Bayes
-      
-      - Logistic regression
+  - Multinomial Naive Bayes
+  - Logistic regression
       
 - Deep Learning Algorithms :
 
-       - Convolutional Neural Networks
+  - Convolutional Neural Networks
        
 ## Frameworks
  
  - Streamlit
 
-## Your learnings from project
+## What We learnt
 
-  -   Team Work
-  
-  -   Approaching a Problem Statement
-  
-  -
-  
-## Features 
+Through this project, we learnt many new things like–
+- Deploying different Machine Learning & Deep Learning models in one place for one goal.
 
-- 
+- The basics of Streamlit framework for better UI and integrating different models.
+
+- Having learnt the concept of Machine Learning & Deep Learning, we could ponder and think about its real-life application for the enhancement of healthcare services.
+
+- Team spirit & Collective growth undoubtedly are one of the most important things we learnt while
+working on the project. 
   
+## Experience while working on the Project
+
+The project was an amazing experience. It required a great amount of brainstorming, exploring and effort to bring it from a mere concept to reality. Collaborating on it as a team was incredibly thrilling. The journey of constructing the application began with pondering on the basic idea, followed by each of us working independently to construct models and frameworks. But soon, we started collaborating and working together as a team on the entire project. In the end, we could integrate four machine learning models and three deep learning models using the Streamlit framework for our project. 
+
+## Keypoints of the Project
+
+- The application has many features related to healthcare like disease prediction from symptoms, diabetes prediction, heart disease prediction, brain tumour prediction, breast cancer prediction and malaria prediction.
+- It has its very own chatbot, Tmedo. This was built with a customized dataset & responses and is interactive.
+- Streamlit is used to deploy the models and build the application.
+- The Models used in the project are:
+  - Chatbot (using … model)
+  - disease prediction from symptoms (using … model)
+  - diabetes prediction (using … model)
+  - heart disease prediction (using … model)
+  - brain tumor prediction (using CNN) 
+  
+## Basic Flow of the Project
+
+- PIC/Describe
