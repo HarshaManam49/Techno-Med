@@ -153,7 +153,7 @@ if selected=="Technician":
 
         class_names=["parasited","uninfected"]
 
-        model=load_model("models/Malaria/malaria.h5")
+        model=load_model("models\Malaria\malaria.h5")
 
 
         file = st.file_uploader("Please upload an brain scan file", type=["jpg", "png"])
@@ -178,13 +178,16 @@ if selected=="Technician":
             else:
                 image = Image.open(file)
                 prediction = import_and_predict(image, model)
-                st.image(image,use_column_width=True)
                 if prediction[0]<0.5 :
                     st.error(""" ### High probabilty of Malaria""")
 
                 else :
-                    st.success("Hurray you are Fine")
+                    st.success(""" ### Hurray you are Fine""")
                     st.balloons()
+        if file:
+            image = Image.open(file)
+            width = st.slider('', 150, 500)
+            st.image(image,width=width)
 
 
     if (options=="Brain Tumor"):
@@ -215,7 +218,6 @@ if selected=="Technician":
                 st.error("Please upload an image file")
             else:
                 image = Image.open(file)
-                st.image(image, use_column_width=True)
                 prediction = import_and_predict(image, model)
                 pred=np.argmax(prediction)
                 if pred==1 :
@@ -224,6 +226,10 @@ if selected=="Technician":
                 else :
                     st.success("""### Hurray you are Fine""")
                     st.balloons()
+        if file:
+            image = Image.open(file)
+            width = st.slider('', 150, 500)
+            st.image(image,width=width)
 
 
 
@@ -255,7 +261,6 @@ if selected=="Technician":
                 st.error("Please upload an image file")
             else:
                 image = Image.open(file)
-                st.image(image, use_column_width=True)
                 prediction = import_and_predict(image, model)
                 if prediction[0]>0.5 :
                     st.error(""" ### High probabilty of Breast Cancer""")
@@ -263,3 +268,8 @@ if selected=="Technician":
                 else :
                     st.success(""" ### Hurray you are Fine""")
                     st.balloons()
+
+        if file:
+            image = Image.open(file)
+            width = st.slider('', 150, 500)
+            st.image(image,width=width)
