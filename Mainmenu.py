@@ -349,7 +349,7 @@ def reply_chat(intent_idx):
     ]
   else:
     l=[
-        "oh"
+        "oh!"
     ]
   rand_idx = random.randrange(len(l))
   random_str = l[rand_idx]
@@ -552,46 +552,46 @@ if selected=="Technician":
                 st.success("Huurayy! You are Fine")
                 st.balloons()
 
-    # if (options=="Malaria"):
-    #     st.title('Malaria Disease Prediction')
+    if (options=="Malaria"):
+        st.title('Malaria Disease Prediction')
 
-    #     class_names=["parasited","uninfected"]
+        class_names=["parasited","uninfected"]
 
-    #     model=load_model("models\Malaria\malaria.h5")
+        model=load_model("models\Malaria\malaria.h5")
 
 
-    #     file = st.file_uploader("Please upload an brain scan file", type=["jpg", "png"])
+        file = st.file_uploader("Please upload an brain scan file", type=["jpg", "png"])
 
-    #     st.set_option('deprecation.showfileUploaderEncoding', False)
+        st.set_option('deprecation.showfileUploaderEncoding', False)
 
-    #     def import_and_predict(image_data, model):
+        def import_and_predict(image_data, model):
 
-    #             size = (256,256)    
-    #             image = ImageOps.fit(image_data, size, Image.ANTIALIAS)
-    #             image = np.asarray(image)
-    #             img = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+                size = (256,256)    
+                image = ImageOps.fit(image_data, size, Image.ANTIALIAS)
+                image = np.asarray(image)
+                img = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
-    #             img_reshape = img[np.newaxis,...]
+                img_reshape = img[np.newaxis,...]
 
-    #             prediction = model.predict(img_reshape)
-    #             return prediction
+                prediction = model.predict(img_reshape)
+                return prediction
 
-    #     if st.button("Predict"):
-    #         if file is None:
-    #             st.error("Please upload an image file")
-    #         else:
-    #             image = Image.open(file)
-    #             prediction = import_and_predict(image, model)
-    #             if prediction[0]<0.5 :
-    #                 st.error(""" ### High probabilty of Malaria""")
+        if st.button("Predict"):
+            if file is None:
+                st.error("Please upload an image file")
+            else:
+                image = Image.open(file)
+                prediction = import_and_predict(image, model)
+                if prediction[0]<0.5 :
+                    st.error(""" ### High probabilty of Malaria""")
 
-    #             else :
-    #                 st.success(""" ### Hurray you are Fine""")
-    #                 st.balloons()
-    #     if file:
-    #         image = Image.open(file)
-    #         width = st.slider('', 150, 500)
-    #         st.image(image,width=width)
+                else :
+                    st.success(""" ### Hurray you are Fine""")
+                    st.balloons()
+        if file:
+            image = Image.open(file)
+            width = st.slider('', 150, 500)
+            st.image(image,width=width)
 
 
     if (options=="Brain Tumor"):
