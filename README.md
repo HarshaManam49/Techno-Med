@@ -85,6 +85,3 @@ The project was an amazing experience. It required a great amount of brainstormi
   - heart disease prediction (using … model)
   - brain tumor prediction (using CNN) 
   
-## Basic Flow of the Project
-
-- PIC/Describe
