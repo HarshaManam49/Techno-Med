@@ -79,9 +79,10 @@ The project was an amazing experience. It required a great amount of brainstormi
 - It has its very own chatbot, Tmedo. This was built with a customized dataset & responses and is interactive.
 - Streamlit is used to deploy the models and build the application.
 - The Models used in the project are:
-  - Chatbot (using … model)
-  - disease prediction from symptoms (using … model)
-  - diabetes prediction (using … model)
-  - heart disease prediction (using … model)
+  - Chatbot (using Logistic Regression model)
+  - disease prediction from symptoms (using Multinomial Navie Bayes model)
+  - diabetes prediction (using Logistic Regression model)
+  - heart disease prediction (using Logistic Regression model)
   - brain tumor prediction (using CNN) 
-  
+  - Malaria (using CNN)
+  - Breast Cancer (using CNN)
