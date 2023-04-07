@@ -1,5 +1,5 @@
-import nltk
 from tensorflow import keras
+import nltk
 from keras.models import load_model
 import streamlit as st
 from streamlit_option_menu import option_menu
