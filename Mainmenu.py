@@ -1,3 +1,4 @@
+import nltk
 from tensorflow import keras
 from keras.models import load_model
 import streamlit as st
@@ -7,7 +8,6 @@ import pickle
 import cv2
 from PIL import Image, ImageOps
 import numpy as np
-import nltk
 import string
 from nltk.stem.porter import PorterStemmer
 import pandas as pd
